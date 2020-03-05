@@ -1,60 +1,36 @@
-# Omise Code Challenges
+# ELIXIR-TAMBOON
 
-This repository houses the code challenges for Omise. These are
-small hands-on projects that are very relevant to the tasks you will be working on here.
+This is a challenge project to see how good you are with Elixir. Included in this
+repository is a CSV file of Song-pah-pa (ซองผ้าป่า). It is a white envelope with money
+inside and the donor name printed on the front. They are usually collected from
+multiple people in order to round up money to repair or construct new temple buildings.
 
-### Ground Rules
+But we're a payment gateway, we can do better than that. The envelope will contain,
+instead, a valid credit card number (fake ones, not a real working card) and the desired donation
+amount.
 
-* We prefer well-thought-out solutions over the quick-and-dirty kind. So take your time,
-  if you need it 
-* Average completion time so far has been around one to two weeks
-* Submission is done via a [git format-patch](https://git-scm.com/docs/git-format-patch)
-  Send your patch to the hiring team.
+### CONTENTS
 
-### What to expect
+* `donations.csv` - A CSV file contains list of donator's name, credit card number and donation amount.
 
-We do understand that our code challenges are time intensive and not always easy to
-execute. We do recognize and value the time and effort applicants put into their
-submission. Our Code Challenges reflect some of the tasks and skills you'd need while
-working with us. We believe that these *take-home* challenges will give you a deeper
-understanding of our product, what you'd be working on in the future and what level of
-commitment we look for in applicants.
+### EXERCISE
 
-### What we look for
+Write a program that, when given the CSV file, calls the [Charge API][0] to
+make donations by creating a charge for each row in the file and produce an useful summary output such as
+`total donations`, `successful charges`, `failed charges`, `average amount per person`, `top x donators`.
 
-Rather than a complex solution, which added a million features and is written in 10,000
-lines of code, we look for:
+**Requirements:**
 
-* **Clarity:** You can write clear code that any devs could read and understand in one go
-* **Simplicity:** You can write gimmick-free and straightforward code with no ambiguities
-* **Defensiveness:** You can cover edge cases and treat user inputs with care
+* Make donations by creating a Charge to Omise for each row in the CSV.
+* Produce a brief summary as an output.
+* Handle errors gracefully, without stopping the entire process.
+* Writes readable and maintainable code.
 
-### What happens after your submission
+**Bonus:**
 
-Once you have submitted your solution by sending us the **git-format-patch**, our
-Engineers will review the code. Due to the number of submissions we receive, and
-time-intensive review process, it might take us **1 week** to give you feedback on the
-submission. Based on the feedback, we will invite you for a meeting to talk more about
-your submission and continue the recruitment process.
+* Have a good project structure.
+* Be a good internet citizen and throttles the API call if we hit rate limit.
+* Run as fast as possible on a multi-core CPU.
+* Ensure reproducible builds on your workspace.
 
-### Challenges
-
-Pick the one that most suites the position you wish to apply.
-
-**Omise**
-
-* Backend / Ruby on Rails - [tamboon-rails](https://github.com/omise/challenges/tree/challenge-rails)
-* Foundation / Ruby on Rails - [tamboon-rails](https://github.com/omise/challenges/tree/challenge-rails)
-* Backend / Go - [go-challenge](https://github.com/omise/challenges/tree/challenge-go)
-* Devops / Kubernetes [challenge-devops](https://github.com/omise/challenges/tree/challenge-devops)
-* Frontend / React - [tamboon-react](https://github.com/omise/challenges/tree/challenge-react)
-* Mobile App / iOS and Android - [tamboon-mobile](https://github.com/omise/challenges/tree/challenge-mobile)
-* Design / UX - [design-challenge](https://github.com/omise/challenges/blob/challenge-design/design-challenge.pdf)
-
-### Have fun and we look forward to your submission!
-
-
-<h2>
-ᕙ(⇀‸↼‶)ᕗ
-</h2>
-
+ [0]: https://www.omise.co/charges-api
